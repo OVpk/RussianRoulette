@@ -4,8 +4,11 @@
     {
         public static void Main(string[] args)
         {
+            Joueur joueur = new Joueur();
+            joueur.Role();
+            
             Tableau tableau = new Tableau();
-            tableau.InitialisationTableau();
+            tableau.AfficherBarillet(tableau.MelangerBalle(tableau.InitialisationTableau()));
         }
     }
 }
