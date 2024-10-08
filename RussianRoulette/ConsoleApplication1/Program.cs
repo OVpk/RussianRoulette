@@ -12,6 +12,8 @@
             tableau.MelangerBalle(barrilletActuel);
             tableau.AfficherBarillet(barrilletActuel);
             tableau.IndexActuelBalle(barrilletActuel);
+            //tableau.IsDead(barrilletActuel, 1);
+            barrilletActuel = tableau.BarrilletApresTour(barrilletActuel, 2);
         }
     }
 }
