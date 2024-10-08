@@ -52,8 +52,6 @@ namespace ConsoleApplication1
             {
                 Random random = new Random();
                 int randomIndex = random.Next(0, 6);
-                Console.Write(randomIndex);
-                Console.WriteLine();
 
                 (int x, int y) chambreChoisi = chambres[randomIndex];
 
@@ -67,13 +65,39 @@ namespace ConsoleApplication1
                 {
                     if (tableau[chambres[i].x, chambres[i].y] == "X")
                     {
-                        Console.WriteLine();
-                        Console.Write(i);
+                        
                         return i;
                     }
                 }
                 return -1;
             }
+
+        public bool IsDead(string[,] tableau, int nbTirs)
+        {
+            if (IndexActuelBalle(tableau) - nbTirs < 0)
+            {
+                
+                return true;
+            }
+            
+            return false;
+        }
+
+        
+
+        public string[,] BarrilletApresTour(string[,] tableau, int nbTirs)
+        {
+            if (!IsDead(tableau, nbTirs))
+            {
+                (int x, int y) ancienEmplacementBalle = chambres[IndexActuelBalle(tableau)];
+                (int x, int y) nouveauEmplacementBalle = chambres[IndexActuelBalle(tableau) - nbTirs];
+                tableau[nouveauEmplacementBalle.x, nouveauEmplacementBalle.y] = "X";
+                tableau[ancienEmplacementBalle.x, ancienEmplacementBalle.y] = "O";
+            }
+            
+
+            return tableau;
+        }
 
         
 

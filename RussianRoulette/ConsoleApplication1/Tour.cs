@@ -10,12 +10,12 @@ namespace ConsoleApplication1
         public int positionballe;
         public int pointj1 = 0;
         public int pointj2 = 0;
-        
+        private string[,] barriellet;
         public void DebutTour()
         {
             Console.WriteLine("entrée n'importe quelle touche");
             ouiOuNon = Console.ReadLine();
-            string[,] barriellet = tableau.InitialisationTableau();
+            barriellet = tableau.InitialisationTableau();
             tableau.MelangerBalle(barriellet);
             //tableau.AfficherBarillet(barrie);
             positionballe = tableau.IndexActuelBalle(barriellet);
@@ -26,13 +26,17 @@ namespace ConsoleApplication1
             {
                 Console.WriteLine("Canon vide, continuer ? (Y/N)");
                 ouiOuNon = Console.ReadLine();
+                int nbTire = 1;
+                
                 if (ouiOuNon == "Y")
                 {
                     positionballe = positionballe - 1;
+                    nbTire += 1;
                     
                     if (joueur.j1Prio == true)
                     {
                         pointj1 = pointj1 + 1;
+                        
                     }
                     else
                     {
@@ -41,7 +45,9 @@ namespace ConsoleApplication1
                 }
                 else if (ouiOuNon == "N")
                 {
-                    
+                    tableau.AfficherBarillet(tableau.BarrilletApresTour(barriellet, nbTire));
+                    Console.WriteLine("J1 pts : " + pointj1 +" " +"J2 pts : " + pointj2);
+                    return;
                 }
             } while (positionballe >=0);
             
