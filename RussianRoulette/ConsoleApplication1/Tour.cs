@@ -13,7 +13,7 @@ namespace ConsoleApplication1
         private string[,] barriellet;
         public void DebutTour()
         {
-            Console.WriteLine("entrée n'importe quelle touche");
+            Console.WriteLine("Appuyez sur entré :");
             ouiOuNon = Console.ReadLine();
             barriellet = tableau.InitialisationTableau();
             barriellet = tableau.MelangerBalle(barriellet);
