@@ -6,7 +6,7 @@
         {
             Joueur joueur = new Joueur();
             joueur.Role();
-            
+
             Tableau tableau = new Tableau();
             tableau.AfficherBarillet(tableau.MelangerBalle(tableau.InitialisationTableau()));
         }

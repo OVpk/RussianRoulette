@@ -24,11 +24,15 @@ namespace ConsoleApplication1
             
             if (rnd.Next(2) == 0)
             {
-                Console.WriteLine("J1");
+                Console.WriteLine(pseudoJoueur1+" commence la partie");
+                j1Prio = true;
+                j2Prio = false;
             }
             else 
             {
-                Console.WriteLine("J2");
+                Console.WriteLine(pseudoJoueur2+" commence la partie");
+                j1Prio = false;
+                j2Prio = true;
             }
             
                 
