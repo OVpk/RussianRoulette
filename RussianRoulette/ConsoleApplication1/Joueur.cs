@@ -9,7 +9,6 @@ namespace ConsoleApplication1
         public string pseudoJoueur1;
         public string pseudoJoueur2;
         public bool j1Prio;
-        public bool j2Prio;
         
         public void Role()
         {
@@ -26,13 +25,11 @@ namespace ConsoleApplication1
             {
                 Console.WriteLine(pseudoJoueur1+" commence la partie");
                 j1Prio = true;
-                j2Prio = false;
             }
             else 
             {
                 Console.WriteLine(pseudoJoueur2+" commence la partie");
                 j1Prio = false;
-                j2Prio = true;
             }
             
                 

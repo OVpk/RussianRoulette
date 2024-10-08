@@ -46,10 +46,10 @@ namespace ConsoleApplication1
                 }
             }
         }
+        
+        (int x, int y)[] chambres = new (int x, int y)[] {(0,3),(1,5),(2,5),(3,3),(2,1),(1,1)};
         public string[,] MelangerBalle(string[,] tableau)
             {
-                (int x, int y)[] chambres = new (int x, int y)[] {(0,3),(1,5),(2,5),(3,3),(2,1),(1,1)};
- 
                 Random random = new Random();
                 int randomIndex = random.Next(0, 6);
                 Console.Write(randomIndex);
@@ -59,6 +59,20 @@ namespace ConsoleApplication1
 
                 tableau[chambreChoisi.x, chambreChoisi.y] = "X";
                 return tableau;
+            }
+        
+        public int IndexActuelBalle(string[,] tableau)
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    if (tableau[chambres[i].x, chambres[i].y] == "X")
+                    {
+                        Console.WriteLine();
+                        Console.Write(i);
+                        return i;
+                    }
+                }
+                return -1;
             }
 
         
