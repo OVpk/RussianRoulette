@@ -8,7 +8,7 @@
             joueur.Role();
             
             Tableau tableau = new Tableau();
-            tableau.InitialisationTableau();
+            tableau.AfficherBarillet(tableau.MelangerBalle(tableau.InitialisationTableau()));
         }
     }
 }
