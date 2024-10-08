@@ -14,8 +14,11 @@ namespace ConsoleApplication1
             Tour tour = new Tour();
             tour.tableau = tableau;
             tour.joueur = joueur;
-            tour.DebutTour();
-            tour.Tire();
+            do
+            {
+                tour.DebutTour();
+                tour.Tire();
+            } while (!tour.IsDead);
 
 
 
