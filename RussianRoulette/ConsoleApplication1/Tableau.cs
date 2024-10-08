@@ -65,7 +65,6 @@ namespace ConsoleApplication1
                 {
                     if (tableau[chambres[i].x, chambres[i].y] == "X")
                     {
-                        
                         return i;
                     }
                 }
@@ -74,13 +73,7 @@ namespace ConsoleApplication1
 
         public bool IsDead(string[,] tableau, int nbTirs)
         {
-            if (IndexActuelBalle(tableau) - nbTirs < 0)
-            {
-                
-                return true;
-            }
-            
-            return false;
+            return (IndexActuelBalle(tableau) - nbTirs < 0);
         }
 
         

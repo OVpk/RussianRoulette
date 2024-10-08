@@ -16,7 +16,8 @@ namespace ConsoleApplication1
             Console.WriteLine("entrée n'importe quelle touche");
             ouiOuNon = Console.ReadLine();
             barriellet = tableau.InitialisationTableau();
-            tableau.MelangerBalle(barriellet);
+            barriellet = tableau.MelangerBalle(barriellet);
+            tableau.AfficherBarillet(barriellet);
             //tableau.AfficherBarillet(barrie);
             positionballe = tableau.IndexActuelBalle(barriellet);
         }
@@ -32,6 +33,7 @@ namespace ConsoleApplication1
                 {
                     positionballe = positionballe - 1;
                     nbTire += 1;
+                    
                     
                     if (joueur.j1Prio == true)
                     {
