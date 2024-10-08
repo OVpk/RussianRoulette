@@ -60,6 +60,11 @@ namespace ConsoleApplication1
                 tableau[chambreChoisi.x, chambreChoisi.y] = "X";
                 return tableau;
             }
+        
+            public void GunTime(string[,] tableau, int nbTirs)
+            {
+                
+            }
 
         
 
