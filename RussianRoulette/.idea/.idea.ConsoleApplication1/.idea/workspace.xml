@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77e7137b-01a7-4225-b82c-88092d8d8590" name="Changes" comment="" />
+    <list default="true" id="77e7137b-01a7-4225-b82c-88092d8d8590" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/ConsoleApplication1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/ConsoleApplication1.csproj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,9 +44,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\m.franceschini\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\m.franceschini\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\m.franceschini\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\e.laffont\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\e.laffont\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\e.laffont\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -78,6 +80,7 @@
       <updated>1728376093993</updated>
       <workItem from="1728376095219" duration="5189000" />
       <workItem from="1728383521880" duration="3254000" />
+      <workItem from="1728392045210" duration="26000" />
     </task>
     <servers />
   </component>

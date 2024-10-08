@@ -6,7 +6,7 @@ namespace ConsoleApplication1
     {
         public void parametres()
         {
-            int num_round = int.Parse(Console.ReadLine());
+            int num_round = 0;
             if (num_round < 6)
             {
                 Console.Write("minimun 6 chambres");
@@ -15,7 +15,7 @@ namespace ConsoleApplication1
             {
                 Console.Write("maximun 15 chambres");
             }
-            int num_bullet = int.Parse(Console.ReadLine());
+            int num_bullet = 0;
             if (num_bullet <= 1)
             {
                 Console.Write("minimun 1 balle");
