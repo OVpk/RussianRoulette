@@ -84,8 +84,11 @@ namespace ConsoleApplication1
             {
                 (int x, int y) ancienEmplacementBalle = chambres[IndexActuelBalle(tableau)];
                 (int x, int y) nouveauEmplacementBalle = chambres[IndexActuelBalle(tableau) - nbTirs];
-                tableau[nouveauEmplacementBalle.x, nouveauEmplacementBalle.y] = "X";
-                tableau[ancienEmplacementBalle.x, ancienEmplacementBalle.y] = "O";
+                if (ancienEmplacementBalle != nouveauEmplacementBalle)
+                {
+                    tableau[nouveauEmplacementBalle.x, nouveauEmplacementBalle.y] = "X";
+                    tableau[ancienEmplacementBalle.x, ancienEmplacementBalle.y] = "O";
+                }
             }
             
 

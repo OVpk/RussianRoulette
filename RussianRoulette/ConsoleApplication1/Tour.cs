@@ -19,7 +19,7 @@ namespace ConsoleApplication1
             ouiOuNon = Console.ReadLine();
             barriellet = tableau.InitialisationTableau();
             barriellet = tableau.MelangerBalle(barriellet);
-            tableau.AfficherBarillet(barriellet);
+            //tableau.AfficherBarillet(barriellet);
             positionballe = tableau.IndexActuelBalle(barriellet);
         }
         public void Tire()
@@ -53,6 +53,8 @@ namespace ConsoleApplication1
                     tableau.AfficherBarillet(tableau.BarrilletApresTour(barriellet, nbTire));
                     Console.WriteLine("J1 pts : " + pointj1 +" | " +"J2 pts : " + pointj2);
                     joueur.j1Prio = !joueur.j1Prio;
+                    Console.WriteLine();
+                    Console.WriteLine("Changement de joueur !");
                     return;
                 }
             } while (positionballe >=0);
@@ -61,11 +63,13 @@ namespace ConsoleApplication1
             if (joueur.j1Prio == true)
             {
                 pointj1 = pointj1 - nbTire;
+                pointj2 = pointj2 + nbTire;
 
             }
             else
             {
                 pointj2 = pointj2 - nbTire;
+                pointj1 = pointj1 + nbTire;
             }
             Console.WriteLine("J1 pts : " + pointj1 +" | " +"J2 pts : " + pointj2);
             IsDead = true;
